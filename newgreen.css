@@ -1,0 +1,144 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    background-image: url(build.jpeg); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay to control opacity */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity with the last value (0.5 = 50% opacity) */
+    z-index: 0; /* Keeps the overlay behind the content */
+}
+
+header, main, footer {
+    position: relative;
+    z-index: 1; /* Ensures content is above the overlay */
+}
+
+header {
+    background-color: rgba(3, 55, 15, 0.8); /* Make the header background slightly transparent */
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.home-logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: 50px;
+    margin-right: 10px; /* Spacing between logo and text */
+}
+
+header .logo a {
+    font-size: 24px;
+    color: #fff; /* Set the logo text color to white */
+    text-decoration: none;
+}
+
+header .logo a:hover {
+    color: #ddd; /* Optional: Slightly lighter color on hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for sections */
+    border-radius: 8px;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+ul2 li2 {
+    font-size: 18px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+.section-image {
+    max-width: 80%;
+    height: auto;
+    margin: 8px 0;
+}
+
+.section-image {
+    width: 500px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Adjusts image to fit the dimensions without distortion */
+    margin: 10px 0; /* Space around the image */
+}
+
+footer {
+    background-color: rgba(3, 55, 15, 0.8); /* Semi-transparent background for footer */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
